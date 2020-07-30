@@ -1,0 +1,42 @@
+{
+  "name": "hoj",
+  "version": "0.0.1",
+  "description": "",
+  "productName": "hoj",
+  "cordovaId": "org.cordova.quasar.app",
+  "capacitorId": "",
+  "author": "hzcool <562954019@qq.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.18.1",
+    "codemirror": "latest",
+    "echarts": "^4.8.0",
+    "highlight": "^0.2.4",
+    "mavon-editor": "^2.9.0",
+    "quasar": "^1.0.0",
+    "showdown": "^1.9.1",
+    "view-design": "^4.2.0",
+    "vue-clipboard2": "^0.3.1",
+    "vue-codemirror": "^4.0.6",
+    "vue-echarts": "^5.0.0-beta.0",
+    "vue-highlightjs": "^1.3.3",
+    "vue-showdown": "^2.4.1",
+    "vue2-countdown": "^1.0.8"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0",
+    "babel-plugin-import": "^1.13.0"
+  },
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}

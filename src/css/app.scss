@@ -1,0 +1,56 @@
+// app global css in SCSS form
+
+.myFonts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:"微软雅黑","宋体","黑体", Arial, sans-serif;
+  //background: red;
+}
+
+//@font-face {
+//  font-family: customfont;
+//  src: url(./fonts/customfont.woff);
+//}
+
+// 声明一个应用它的类
+//.my-font {
+//  font-family: 'customfont';
+//}
+body {
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.All{
+  color: black;
+}
+.Queueing {
+  color: green;
+}
+.Running{
+  color: #000080;
+}
+.Accepted {
+  color :	#00DB00;
+}
+.WrongAnswer{
+  color: red;
+}
+.CompileError{
+  color: blue;
+}
+.RuntimeError{
+  color: Fuchsia;
+}
+.TimeLimitExceeded {
+  color: 	DeepPink;
+}
+.MemoryLimitExceeded {
+  color: Crimson;
+}
+.OutputLimitExceeded{
+  color: DarkViolet;
+}
+.SystemError{
+  color: Gold;
+}
+
