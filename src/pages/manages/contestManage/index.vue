@@ -35,7 +35,7 @@
           <Button type="primary" @click="$router.push({name:'contestInfo',params:{id:row.id}})" v-if="($store.state.user.privilege&512)>0"> 修改 </Button>
           <Button type="error" style="margin-left: 10px" @click="deleteContest(index,row)" v-if="($store.state.user.privilege&1024)>0"> 删除 </Button>
           <Button type="info" style="margin-left: 10px" @click="$router.push({name:'ranklist',params:{id:row.id,format:row.format}})"> 比赛榜单 </Button>
-          <Button type="warning" style="margin-left: 10px" @click="$router.push({name:'csubmissions',params:{'id':row.id}})" v-if="($store.state.user.privilege&8)>2048">提交记录</Button>
+          <Button type="warning" style="margin-left: 10px" @click="$router.push({name:'csubmissions',params:{'id':row.id}})" v-if="($store.state.user.privilege&2048)>0">提交记录</Button>
           <Button type="success" style="margin-left: 10px" @click="$router.push({name:'cproblems',params:{'id':row.id}})"> 比赛题目 </Button>
           <Button  style="margin-left: 10px;background-color: orange;color:white" @click="$router.push({name:'clarifications',params:{'id':row.id}})"> 通告 </Button>
         </template>

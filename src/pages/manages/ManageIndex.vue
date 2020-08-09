@@ -1,12 +1,18 @@
 
 
 <template>
-  <h1 class="q-ma-lg">hello world</h1>
+  <q-page class="row justify-center q-mt-md" style="min-height: 1000px;">
+    <div style="width:1400px; height:500px;">
+      <ImageBar  />
+    </div>
+  </q-page>
 </template>
 
 <script>
+  import ImageBar from "components/ImageBar";
   export default {
-    name: "index"
+    name: "index",
+    components:{ImageBar},
   }
 </script>
 
