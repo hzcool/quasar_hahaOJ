@@ -90,8 +90,8 @@
       if (!this.$store.state.user.is_login) {
         this.$req.autologin()
           .then(() => {
-              if (!this.$store.state.user.is_login) this.$router.push({name:"home"})
-              this.loaded = true
+              if (!this.$store.state.user.is_login) this.$router.push({name:"home"});
+              else this.loaded = true
             })
       } else {
         this.loaded = true

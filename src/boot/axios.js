@@ -2,7 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import store from '../store/index.js'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-fromurlencodeed'
-// axios.defaults.baseURL = '/api'
+axios.defaults.baseURL = '/api'
 Vue.prototype.$axios = axios
 
 
@@ -51,6 +51,7 @@ const requeset = {
   },
 
   async autologin() {
+    LoadingBar.start()
     await axios.get("autologin")
       .then(res =>{
         if (res.data.errno == undefined) {
@@ -59,6 +60,7 @@ const requeset = {
       }).catch(err => {
         console.log(err.response.data)
       })
+    setTimeout(LoadingBar.stop(),500)
   },
 }
 Vue.prototype.$req = requeset

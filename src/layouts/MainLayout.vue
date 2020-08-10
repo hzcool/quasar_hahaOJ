@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf" style="background:  #f1f3f6">
+  <q-layout view="hHh lpR fFf" style="background:  #f1f3f6" v-if="loaded">
 
     <q-header elevated class="bg-primary text-white" height-hint="98">
       <q-toolbar>
@@ -161,6 +161,7 @@
         left: false,
         miniState: true,
         gg:true,
+        loaded:false,
         date: new Date(), //实时时间
       }
     },
@@ -187,6 +188,11 @@
     mounted() {
       if (!this.$store.state.user.is_login) {
          this.$req.autologin()
+        .then(()=>{
+          this.loaded = true
+        })
+      }else {
+        this.loaded = true
       }
       var _this = this;
       this.timer = setInterval(function(){
