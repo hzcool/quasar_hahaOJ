@@ -29,7 +29,7 @@
         <q-item-section>
           <q-item-label>
             <q-chip :color="colorForRatio(row.ratio)" text-color="white" dense style="font-size: 1rem;width: 7.5rem" >
-              {{100*row.ratio.toFixed(2)}}% ({{row.ac}}/{{row.all}})
+              {{(100*row.ratio).toFixed(2)}}% ({{row.ac}}/{{row.all}})
             </q-chip>
           </q-item-label>
         </q-item-section>

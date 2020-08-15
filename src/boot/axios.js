@@ -2,7 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import store from '../store/index.js'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-fromurlencodeed'
-axios.defaults.baseURL = '/api'
+// axios.defaults.baseURL = '/api'
 Vue.prototype.$axios = axios
 
 

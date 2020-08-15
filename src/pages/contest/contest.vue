@@ -238,6 +238,7 @@
     mounted() {
       setTimeout(()=>{
         this.contest.id = this.$route.params.id
+        this.canShow = this.$store.state.user.is_super_admin
         if(this.contest.id) {
           this.getContestContent()
         } else {
