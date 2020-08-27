@@ -20,13 +20,13 @@
             <count-down
               @start_callback="toStart"
               @end_callback="toEnd"
-              :startTime="contest.begin.getTime()"
-              :endTime="contest.end.getTime()"
+              :startTime="contest.begin"
+              :endTime="contest.end"
               :currentTime="contest.now"
               :tipText="'开始倒计时'"
               :tipTextEnd="'结束倒计时'"
               :endText="'比赛已结束'"
-              :dayTxt="'天'"
+              :dayTxt="'天 '"
               :hourTxt="':'"
               :minutesTxt="':'"
               :secondsTxt="''"
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-  import CountDown from 'vue2-countdown'
+  import CountDown from "components/CountDown";
   import ContestBaseInfo from "./contestComponent/ContestBaseInfo"
   import Cproblems from "./contestComponent/Cproblems"
   import Csubmissions from "./contestComponent/Csubmissions"
@@ -145,6 +145,7 @@
     },
     methods: {
       toStart() {
+
         this.canShow = true
         this.countdownMsg = "结束倒计时"
       },
@@ -172,8 +173,9 @@
           .then(res => {
             if(res.errno == undefined){
               this.contest = res.contest
-              this.contest.begin = new Date(this.contest.begin)
-              this.contest.end = new Date(this.contest.end)
+              this.contest.begin = (new Date(this.contest.begin)).getTime()
+              this.contest.end = (new Date(this.contest.end)).getTime()
+              this.contest.now = (new Date(this.contest.now)).getTime()
               this.loaded = true
             } else {
                 this.$router.push({name:'home'})

@@ -123,7 +123,7 @@
           }
           this.$req.post("register",form)
           .then(res => {
-              if(res) {
+              if(res.errno == undefined) {
                   this.$store.commit("login",res)
                   this.$router.push({name:"home"})
               }
