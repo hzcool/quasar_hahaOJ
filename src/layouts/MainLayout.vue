@@ -5,8 +5,8 @@
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="left = !left" />
         <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+          <q-avatar size="45px">
+            <img src="../assets/logo1.svg">
           </q-avatar>
           <span class="q-ml-md">Happy Online Judge </span>
         </q-toolbar-title>
@@ -143,9 +143,6 @@
     <q-footer elevated class="bg-grey-8 text-white" align="center">
       <q-toolbar>
         <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar>
           {{date}}
         </q-toolbar-title>
       </q-toolbar>
