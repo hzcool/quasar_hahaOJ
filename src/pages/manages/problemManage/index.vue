@@ -5,7 +5,7 @@
       <q-radio v-model="is_open" :val="false" label="私有题库" color="orange" :disable="($store.state.user.privilege&4)==0"/>
     </div>
     <div class="row q-mt-md q-ml-md">
-      <Page :total="total" :page-size="page_size"  show-total show-elevator  :current.sync="current"/>
+      <Page :total="total" :page-size="page_size"  show-total show-elevator  :current.sync="current" @on-change="get_problems"/>
       <q-space />
       <Button type="info"  class="q-mr-md" @click="$router.push({name:'newProblem'}) " v-if="($store.state.user.privilege&4)>0"> 创建题目 </Button>
       <Button type="warning" class="q-mr-md" @click="reverse"> 反序 </Button>
